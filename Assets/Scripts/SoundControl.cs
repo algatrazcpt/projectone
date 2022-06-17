@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 public class SoundControl : MonoBehaviour
 {
     public Slider gameSoundSlider;
@@ -10,12 +11,26 @@ public class SoundControl : MonoBehaviour
     public AudioMixer gameSounds;
     public AudioMixer vfxSounds;
     public static SoundControl instance;
+    float soundVolume;
+    float vfxVolume;
+
+
     void Start()
     {
         instance = this;
         gameSoundSlider.onValueChanged.AddListener(GameSoundVolumeChange);
         vfxSoundSlider.onValueChanged.AddListener(VfxSoundVolumeChange);
+        gameSounds.GetFloat("Volume",out soundVolume);
+        vfxSounds.GetFloat("Volume", out vfxVolume);
+        SliderUpdate();
+        
     }
+    void SliderUpdate()
+    {
+        gameSoundSlider.value = soundVolume;
+        vfxSoundSlider.value = vfxVolume;
+    }
+
     public void DefaultSounds(float sound,float vfx)
     {
         gameSounds.SetFloat("Volume", sound);
@@ -30,6 +45,11 @@ public class SoundControl : MonoBehaviour
     void VfxSoundVolumeChange(float value)
     {
         vfxSounds.SetFloat("Volume", value);
+    }
+    public void ReturnGame()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.UnloadSceneAsync("PauseScene");
     }
 
 
