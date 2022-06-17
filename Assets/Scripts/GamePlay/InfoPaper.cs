@@ -7,7 +7,6 @@ public class InfoPaper : Interactable
 
     public override string GetDescription()
     {
-
         return "Press [E] to interact.";
     }
 
