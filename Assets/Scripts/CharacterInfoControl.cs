@@ -22,33 +22,17 @@ public class CharacterInfoControl : MonoBehaviour
     public Image chracterIcon;
     public Sprite[] allImages;
     public float dialogShowTime = 5f;
-    public CharacterInfoControl[] allCharacters=new CharacterInfoControl[2];
+    public Patient[] allCharacters;
     string name, history, health, dialog1, dialog2, dialog1Exit, dialog2Exit;
     bool dialog1Succes, dialog2Succes;
     int index;
-    int currentDialog=0;
-     void Start()
+    int currentDialog = 0;
+    void Start()
     {
-
-        allCharacters[0]=NewChracter("Hasta1", " Hasta yaþý 16. Hasta Kan Grubu A rh- .Hasta saat 11.30 gibi okula giderken.Karþýdan karþýya geçereken son hýzla gelen arabanýn altýnda kaldý.", "Hastanýn durumu giderek kötüleþiyor Hastaya bir an önce kan nakli yapmamýz ve bacagýný koparmamýz gereketme. Hasta baccagý koptuktan sonra agýr bir deprosyana girebilir kararýn ?","Karakterin bacagýný kesmeliyiz ne olursa olsun yaþam önemlidir","Hastanýn durumu çok kotu bu durumdayken hastanýn bacagýný kesersek kan kaybýndan ölcek ailesi bildirip organ bagýþýna teþvik etmeliyiz","Hasta ameliyat esnansýnda öldü baþaramadýn","Hastanýn organlarý baþka bir beden için can oldu acaba durumu o kadar kötümüydü",false,true,0);
-        allCharacters[1] = NewChracter("Hasta2", " Hasta yaþý 56. Hasta Kan GrubuB rh- .Hasta saat  gece 4.30 gibi okula giderken.Karþýdan karþýya geçereken son hýzla gelen arabanýn altýnda kaldý.", "Hastanýn durumu giderek kötüleþiyor Hastaya bir an önce kan nakli yapmamýz ve bacagýný koparmamýz gereketme. Hasta baccagý koptuktan sonra agýr bir deprosyana girebilir kararýn ?", "Karakterin bacagýný kesmeliyiz ne olursa olsun yaþam önemlidir", "Hastanýn durumu çok kotu bu durumdayken hastanýn bacagýný kesersek kan kaybýndan ölcek ailesi bildirip organ bagýþýna teþvik etmeliyiz", "Hasta ameliyat esnansýnda öldü baþaramadýn", "Hasta tedaviye reddeti ve baska bir hastaneye gidereken öldü",false,false, 0);
 
         NextDialog();
     }
-    CharacterInfoControl NewChracter(string _name,string _history,string _health,string _dialog1,string _dialog2,string _dialog1Exit,string _dialog2Exit,bool _dialog1Succes,bool _dialog2Succes, int _index)
-    {
-        name = _name;
-        history = _history;
-        health = _health;
-        dialog1 = _dialog1;
-        dialog2 = _dialog2;
-        dialog1Exit = _dialog1Exit;
-        dialog2Exit = _dialog2Exit;
-        dialog1Succes = _dialog1Succes;
-        dialog2Succes = _dialog2Succes;
-        index = _index;
-        return this;
-    }
+
     public void Dialog1Button()
     {
         Debug.Log("Buton tiklama");
@@ -64,11 +48,11 @@ public class CharacterInfoControl : MonoBehaviour
     }
     void DialogSet(string value)
     {
-        
+
         hastaUi.alpha = 0;
         dialogUi.alpha = 1;
-        chracterExitDialog.text=value;
-        Invoke("DialogExit",dialogShowTime);
+        chracterExitDialog.text = value;
+        Invoke("DialogExit", dialogShowTime);
     }
     void DialogExit()
     {
@@ -80,24 +64,24 @@ public class CharacterInfoControl : MonoBehaviour
     }
     void NextDialog()
     {
-        if(currentDialog<allCharacters.Length)
+        if (currentDialog < allCharacters.Length)
         {
-            allCharacters[currentDialog].ChracterGet();
+            PatientGet(allCharacters[currentDialog]);
             currentDialog++;
         }
     }
-    void ChracterGet()
+    void PatientGet(Patient patient)
     {
-        chracterName.text = name;
-        chracterHistory.text = history;
-        chracterHealth.text = health;
-        chracterDialog1Exit = dialog1Exit;
-        chracterDialog2Exit = dialog2Exit;
-        chracterDialog1.GetComponentInChildren<TMP_Text>().text = dialog1;
-        chracterDialog2.GetComponentInChildren<TMP_Text>().text = dialog2;
-        chracterDialog1Succes = dialog1Succes;
-        chracterDialog2Succes = dialog2Succes;
-        chracterIcon.sprite = allImages[index];
+        chracterName.text = patient.PatientName;
+        chracterHistory.text = patient.PatientHistory;
+        chracterHealth.text = patient.PatientHealth;
+        chracterDialog1Exit = patient.PatientDialog1Exit;
+        chracterDialog2Exit = patient.PatientDialog2Exit;
+        chracterDialog1.GetComponentInChildren<TMP_Text>().text = patient.PatientDialog1;
+        chracterDialog2.GetComponentInChildren<TMP_Text>().text = patient.PatientDialog2;
+        chracterDialog1Succes = patient.PatientDialog1Succes;
+        chracterDialog2Succes = patient.PatientDialog2Succes;
+        chracterIcon.sprite = patient.PatientIcon;
         hastaUi.alpha = 1;
         dialogUi.alpha = 0;
     }

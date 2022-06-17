@@ -1763,5 +1763,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfb5e98d57faaa24e963d0942d0acbad, type: 3}
   dialogShowTime: 5
   allCharacters:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e1d79ad276dd6c94c89faf419b7f5f70, type: 2}
+  - {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}
