@@ -2254,6 +2254,7 @@ GameObject:
   - component: {fileID: 1823718041}
   - component: {fileID: 1823718040}
   - component: {fileID: 1823718044}
+  - component: {fileID: 1823718045}
   m_Layer: 5
   m_Name: MainMenuUi
   m_TagString: Untagged
@@ -2359,6 +2360,21 @@ MonoBehaviour:
   menuUi: {fileID: 961243071}
   soundUi: {fileID: 678257507}
   gameScenename: MainGameScene
+--- !u!114 &1823718045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823718039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d673279baeae7a0408cde538a86902c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSoundSlider: {fileID: 145972063}
+  vfxSoundSlider: {fileID: 660038101}
+  gameSounds: {fileID: 24100000, guid: b484e1943107c4f458f5e35c07ef6392, type: 2}
 --- !u!1 &2054650113
 GameObject:
   m_ObjectHideFlags: 0
