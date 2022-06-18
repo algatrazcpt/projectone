@@ -44,5 +44,10 @@ public class MainMenuUiControl : MonoBehaviour
     {
         SceneManager.LoadScene(gameScenename);
     }
+    public void Continue()
+    {
+        Debug.Log("Continue");
+        //SceneManager.LoadScene(gameScenename);
+    }
 
 }

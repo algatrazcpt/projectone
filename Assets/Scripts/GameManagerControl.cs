@@ -80,5 +80,4 @@ public class GameManagerControl : MonoBehaviour
         LoadLevel(currentLevel);
     }
 
-
 }

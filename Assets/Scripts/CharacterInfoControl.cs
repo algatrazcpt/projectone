@@ -30,7 +30,21 @@ public class CharacterInfoControl : MonoBehaviour
         Debug.Log("Buton tiklama");
         DialogSet(chracterDialog1Exit);
         dialogSucces = chracterDialog1Succes;
+        if (dialogSucces)
+        {
+            GameSounControl.instance.VfxPlay(2);
+        }
+        else
+        {
+            GameSounControl.instance.VfxPlay(0);
+            Invoke("SoundFix", 3);
+        }
     }
+    public void SoundFix()
+    {
+        GameSounControl.instance.VfxPlay(1);
+    }
+
     void DialogSet(string value)
     {
 
@@ -47,6 +61,7 @@ public class CharacterInfoControl : MonoBehaviour
         dialogUi.alpha = 0;
         CloseWithoutChoosing();
     }
+
 
     public void LookAtPatient(Patient patient)
     {
