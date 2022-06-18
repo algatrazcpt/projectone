@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class InfoPaper : Interactable
 {
+    public Patient patient;
     public override void Interact()
     {
-            Debug.Log(CharacterInfoControl.Instance.currentDialog);
-            CharacterInfoControl.Instance.NextDialog();
-            Debug.Log("InfoPaper.Interact()");
-
+        //Debug.Log(CharacterInfoControl.Instance.currentDialog);
+        CharacterInfoControl.Instance.LookAtPatient(patient);
+        Debug.Log("InfoPaper.Interact()");
     }
 
 }

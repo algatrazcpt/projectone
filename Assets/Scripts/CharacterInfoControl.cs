@@ -21,13 +21,12 @@ public class CharacterInfoControl : MonoBehaviour
     public bool chracterDialog1Succes;
     public bool chracterDialog2Succes;
     public Image chracterIcon;
-    public Sprite[] allImages;
     public float dialogShowTime = 5f;
     public Patient[] allCharacters;
-    string name, history, health, dialog1, dialog2, dialog1Exit, dialog2Exit;
     bool dialog1Succes, dialog2Succes;
     int index;
     public int currentDialog = 0;
+
     void Start()
     {
         Instance = this;
@@ -40,12 +39,14 @@ public class CharacterInfoControl : MonoBehaviour
         dialogSucces = chracterDialog1Succes;
         currentDialog++;
     }
+
     public void Dialog2Button()
     {
-        Debug.Log("Buton tiklama");
+        Debug.Log("Buton2 tiklama");
         DialogSet(chracterDialog2Exit);
         dialogSucces = chracterDialog2Succes;
         currentDialog++;
+
 
     }
     void DialogSet(string value)
@@ -57,29 +58,14 @@ public class CharacterInfoControl : MonoBehaviour
         CursorShow(false);
         Invoke("DialogExit", dialogShowTime);
     }
+
     void DialogExit()
     {
-        //hastaUi.alpha = 1;
         hastaUi.alpha = 0;
         dialogUi.alpha = 0;
+    }
 
-        
-        //
-        // NextDialog();
-    }
-    public void NextDialog()
-    {
-        if (currentDialog < allCharacters.Length)
-        {
-            PatientGet(allCharacters[currentDialog]);
-           
-        }
-        else
-        {
-            Debug.Log("Hasta kalmadi");
-         }
-    }
-    void PatientGet(Patient patient)
+    public void LookAtPatient(Patient patient)
     {
         chracterName.text = patient.PatientName;
         chracterHistory.text = patient.PatientHistory;
@@ -95,6 +81,7 @@ public class CharacterInfoControl : MonoBehaviour
         dialogUi.alpha = 0;
         CursorShow(true);
     }
+
     void CursorShow(bool value)
     {
         if (!value)
@@ -107,5 +94,12 @@ public class CharacterInfoControl : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+    public void CloseWithoutChoosing()
+    {
+        hastaUi.alpha = 0;
+        CursorShow(true);
+        PlayerInteraction.Instance.StopUIInteraction();
     }
 }
