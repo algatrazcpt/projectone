@@ -15,10 +15,15 @@ public abstract class Interactable : MonoBehaviour
 
     public InteractionType interactionType;
 
-    public abstract string GetDescription();
     public abstract void Interact();
+
+    public string GetDescription()
+    {
+        return "Press [E] to interact.";
+    }
 
     public void IncreaseHoldTime() => holdTime += Time.deltaTime;
     public void ResetHoldTime() => holdTime = 0f;
     public float GetHoldTime() => holdTime;
+
 }
