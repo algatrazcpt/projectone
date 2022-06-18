@@ -100,7 +100,7 @@ public class CharacterInfoControl : MonoBehaviour
     public void CloseWithoutChoosing()
     {
         hastaUi.alpha = 0;
-        CursorShow(true);
+        CursorShow(false);
         PlayerInteraction.Instance.StopUIInteraction();
     }
 }
