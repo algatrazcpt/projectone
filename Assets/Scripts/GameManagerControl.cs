@@ -42,12 +42,24 @@ public class GameManagerControl : MonoBehaviour
         }
     }
 
+    private void SetUpLevel()
+    {
+        if (levels[PlayerPrefs.GetInt(levelString)].patient1 != null)
+        {
+            patient1Paper.GetComponent<InfoPaper>().patient = levels[PlayerPrefs.GetInt(levelString)].patient1;
+        }
+        if (levels[PlayerPrefs.GetInt(levelString)].patient2 != null)
+        {
+            patient2Paper.GetComponent<InfoPaper>().patient = levels[PlayerPrefs.GetInt(levelString)].patient2;
+        }
+    }
+
     public void LoadLevel(int levelNumber)
     {
         if (levelNumber <= levels.Count)
         {
             PlayerPrefs.SetInt(levelString, levelNumber);
-
+            SetUpLevel();
         }
     }
 
