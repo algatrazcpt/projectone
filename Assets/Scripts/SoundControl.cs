@@ -48,6 +48,7 @@ public class SoundControl : MonoBehaviour
     }
     public void ReturnGame()
     {
+        
         PauseControl.pauseMenuShow = true;
         Time.timeScale = 1.0f;
         SceneManager.UnloadSceneAsync("PauseScene");

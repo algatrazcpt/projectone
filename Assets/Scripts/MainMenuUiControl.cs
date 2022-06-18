@@ -33,10 +33,10 @@ public class MainMenuUiControl : MonoBehaviour
         soundUi.gameObject.SetActive(false);
         menuUi.alpha = 1;
         menuUi.gameObject.SetActive(true);
-        GameSounControl.instance.VfxPlay(1);
+        GameSounControl.instance.VfxPlay(0);
     }
     public void NewGameButtClick()    {
-        GameSounControl.instance.VfxPlay(2);
+        GameSounControl.instance.VfxPlay(0);
         Invoke("NewGame", 0.3f);
         
     }
@@ -46,6 +46,7 @@ public class MainMenuUiControl : MonoBehaviour
     }
     public void Continue()
     {
+        GameSounControl.instance.VfxPlay(0);
         Debug.Log("Continue");
         //SceneManager.LoadScene(gameScenename);
     }
