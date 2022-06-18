@@ -68,8 +68,7 @@ public class PlayerInteraction : MonoBehaviour
                 if (Input.GetKeyDown(key))
                 {
                     interactable.Interact();
-                    playerController.canMove = false;
-                    canInteract = false;
+                    StartUIInteraction();
                     // amk texti sıfırlansana debugit later
                     interactionText.text = "";
                     Debug.Log("clickwait");
@@ -107,8 +106,21 @@ public class PlayerInteraction : MonoBehaviour
 
     public void StopUIInteraction()
     {
-        canInteract = true;
+        var v = GameObject.FindGameObjectsWithTag("Interact");
+        foreach(GameObject k in v)
+        {
+            k.GetComponent<Collider>().enabled=true;
+        }
         playerController.canMove = true;
+    }
+    public void StartUIInteraction()
+    {
+        var v=GameObject.FindGameObjectsWithTag("Interact");
+        foreach (GameObject k in v)
+        {
+            k.GetComponent<Collider>().enabled = false;
+        }
+        playerController.canMove = false;
     }
 
 }

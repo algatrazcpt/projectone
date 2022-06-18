@@ -63,6 +63,7 @@ public class CharacterInfoControl : MonoBehaviour
     {
         hastaUi.alpha = 0;
         dialogUi.alpha = 0;
+        CloseWithoutChoosing();
     }
 
     public void LookAtPatient(Patient patient)
