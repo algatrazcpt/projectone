@@ -15,7 +15,7 @@ public class SoundControl : MonoBehaviour
     float vfxVolume;
 
 
-    void Start()
+    void Awake()
     {
         instance = this;
         gameSoundSlider.onValueChanged.AddListener(GameSoundVolumeChange);
