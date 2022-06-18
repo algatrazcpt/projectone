@@ -8,7 +8,8 @@ public class Level : ScriptableObject
     public string levelName;
     public string levelDescription;
     public int levelNumber;
-    public List<Patient> patients;
+    public Patient patient1;
+    public Patient patient2;
     public int levelExperience;
 
 }

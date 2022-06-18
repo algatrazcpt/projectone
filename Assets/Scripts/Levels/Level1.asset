@@ -16,7 +16,6 @@ MonoBehaviour:
   levelDescription: You have to choose which person will live is it easy? Can you
     even choose the right person ?
   levelNumber: 0
-  patients:
-  - {fileID: 11400000, guid: e1d79ad276dd6c94c89faf419b7f5f70, type: 2}
-  - {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}
+  patient1: {fileID: 11400000, guid: e1d79ad276dd6c94c89faf419b7f5f70, type: 2}
+  patient2: {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}
   levelExperience: 10
