@@ -16,17 +16,23 @@ public class MainMenuUiControl : MonoBehaviour
     private void Start()
     {
         SoundControl.instance.DefaultSounds(7, 7);
+        soundUi.gameObject.SetActive(false);
     }
     public void SettingsButtClick()
     {
+        menuUi.gameObject.SetActive(false);
         menuUi.alpha = 0;
+        soundUi.gameObject.SetActive(true);
         soundUi.alpha = 1;
         GameSounControl.instance.VfxPlay(0);
     }
     public void ReturnButtClick()
     {
+        Debug.Log("Return click");
         soundUi.alpha = 0;
+        soundUi.gameObject.SetActive(false);
         menuUi.alpha = 1;
+        menuUi.gameObject.SetActive(true);
         GameSounControl.instance.VfxPlay(1);
     }
     public void NewGameButtClick()    {
