@@ -27,7 +27,7 @@ public class CharacterInfoControl : MonoBehaviour
     string name, history, health, dialog1, dialog2, dialog1Exit, dialog2Exit;
     bool dialog1Succes, dialog2Succes;
     int index;
-    int currentDialog = 0;
+    public int currentDialog = 0;
     void Start()
     {
         Instance = this;
@@ -38,12 +38,14 @@ public class CharacterInfoControl : MonoBehaviour
         Debug.Log("Buton tiklama");
         DialogSet(chracterDialog1Exit);
         dialogSucces = chracterDialog1Succes;
+        currentDialog++;
     }
     public void Dialog2Button()
     {
         Debug.Log("Buton tiklama");
         DialogSet(chracterDialog2Exit);
         dialogSucces = chracterDialog2Succes;
+        currentDialog++;
 
     }
     void DialogSet(string value)
@@ -52,6 +54,7 @@ public class CharacterInfoControl : MonoBehaviour
         hastaUi.alpha = 0;
         dialogUi.alpha = 1;
         chracterExitDialog.text = value;
+        CursorShow(false);
         Invoke("DialogExit", dialogShowTime);
     }
     void DialogExit()
@@ -60,7 +63,7 @@ public class CharacterInfoControl : MonoBehaviour
         hastaUi.alpha = 0;
         dialogUi.alpha = 0;
 
-        CursorShow(false);
+        
         //
         // NextDialog();
     }
@@ -69,7 +72,7 @@ public class CharacterInfoControl : MonoBehaviour
         if (currentDialog < allCharacters.Length)
         {
             PatientGet(allCharacters[currentDialog]);
-            currentDialog++;
+           
         }
         else
         {
