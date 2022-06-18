@@ -9,11 +9,8 @@ public class Patient : ScriptableObject
     public string PatientHistory;
     public string PatientHealth;
     public string PatientDialog1;
-    public string PatientDialog2;
     public string PatientDialog1Exit;
-    public string PatientDialog2Exit;
     public bool PatientDialog1Succes;
-    public bool PatientDialog2Succes;
     public Sprite PatientIcon;
     public int PatientIndex;
 }

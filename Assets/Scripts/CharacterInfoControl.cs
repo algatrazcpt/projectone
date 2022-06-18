@@ -14,14 +14,11 @@ public class CharacterInfoControl : MonoBehaviour
     public TMP_Text chracterHealth;
     public TMP_Text chracterExitDialog;
     public Button chracterDialog1;
-    public Button chracterDialog2;
     public string chracterDialog1Exit;
-    public string chracterDialog2Exit;
     public bool dialogSucces;
     public bool chracterDialog1Succes;
-    public bool chracterDialog2Succes;
     public Image chracterIcon;
-    public float dialogShowTime = 5f;
+    public float dialogShowTime = 3f;
     public Patient[] allCharacters;
     bool dialog1Succes, dialog2Succes;
     int index;
@@ -37,17 +34,10 @@ public class CharacterInfoControl : MonoBehaviour
         Debug.Log("Buton tiklama");
         DialogSet(chracterDialog1Exit);
         dialogSucces = chracterDialog1Succes;
+        //Game manager acces
+        GameManagerControl.Instance.NextPatient();
+        //
         currentDialog++;
-    }
-
-    public void Dialog2Button()
-    {
-        Debug.Log("Buton2 tiklama");
-        DialogSet(chracterDialog2Exit);
-        dialogSucces = chracterDialog2Succes;
-        currentDialog++;
-
-
     }
     void DialogSet(string value)
     {
@@ -72,11 +62,8 @@ public class CharacterInfoControl : MonoBehaviour
         chracterHistory.text = patient.PatientHistory;
         chracterHealth.text = patient.PatientHealth;
         chracterDialog1Exit = patient.PatientDialog1Exit;
-        chracterDialog2Exit = patient.PatientDialog2Exit;
         chracterDialog1.GetComponentInChildren<TMP_Text>().text = patient.PatientDialog1;
-        chracterDialog2.GetComponentInChildren<TMP_Text>().text = patient.PatientDialog2;
         chracterDialog1Succes = patient.PatientDialog1Succes;
-        chracterDialog2Succes = patient.PatientDialog2Succes;
         chracterIcon.sprite = patient.PatientIcon;
         hastaUi.alpha = 1;
         dialogUi.alpha = 0;
