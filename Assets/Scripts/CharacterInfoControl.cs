@@ -19,10 +19,6 @@ public class CharacterInfoControl : MonoBehaviour
     public bool chracterDialog1Succes;
     public Image chracterIcon;
     public float dialogShowTime = 3f;
-    public Patient[] allCharacters;
-    bool dialog1Succes, dialog2Succes;
-    int index;
-    public int currentDialog = 0;
 
     void Start()
     {
@@ -34,10 +30,6 @@ public class CharacterInfoControl : MonoBehaviour
         Debug.Log("Buton tiklama");
         DialogSet(chracterDialog1Exit);
         dialogSucces = chracterDialog1Succes;
-        //Game manager acces
-        GameManagerControl.Instance.NextPatient();
-        //
-        currentDialog++;
     }
     void DialogSet(string value)
     {

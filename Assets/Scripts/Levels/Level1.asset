@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db78841d22b443449acda93d84d8913, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  levelName: First Day On Job
+  levelDescription: You have to choose which person will live is it easy? Can you
+    even choose the right person ?
+  levelNumber: 0
+  patients:
+  - {fileID: 11400000, guid: e1d79ad276dd6c94c89faf419b7f5f70, type: 2}
+  - {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}
+  levelExperience: 10

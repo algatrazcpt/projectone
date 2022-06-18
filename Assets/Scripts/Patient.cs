@@ -12,5 +12,4 @@ public class Patient : ScriptableObject
     public string PatientDialog1Exit;
     public bool PatientDialog1Succes;
     public Sprite PatientIcon;
-    public int PatientIndex;
 }

@@ -4,40 +4,69 @@ using UnityEngine;
 
 public class GameManagerControl : MonoBehaviour
 {
-    public static GameManagerControl Instance;
-    public Patient[] patients;
-    public InfoPaper patientInfo1;
-    public InfoPaper patientInfo2;
-    int index1 = 0;
-    int index2 = 1;
-    private void Start()
-    {
-        Instance = this;
-    }
-    void GetPatient()
-    {
-        patientInfo1.patient = patients[index1];
-        patientInfo2.patient = patients[index2];
+    public static GameManagerControl Instance { get; private set; }
+    public List<Level> levels;
+    private static string levelString = "PlayerLevel";
 
-    }
-    public bool NextPatient()
+    [SerializeField]
+    private GameObject patient1Paper;
+    [SerializeField]
+    private GameObject patient2Paper;
+
+    private void Awake()
     {
-        if (index2+2 <= patients.Length)
+        if (Instance == null)
         {
-            Debug.Log(index1 + "-" + index2);
-            index1 += 2;
-            index2 += 2;
-            GetPatient();
-            return true;
+            Instance = this;
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
-            GameOver();
-            return false;
+            Destroy(gameObject);
         }
     }
-    public void GameOver()
+
+    void Start()
     {
-        Debug.Log("Hasta Bitti");
+        if (PlayerPrefs.HasKey(levelString))
+        {
+            int levelNumber = PlayerPrefs.GetInt(levelString);
+            if (levelNumber < levels.Count)
+            {
+                LoadLevel(levelNumber);
+            }
+            else
+            {
+                LoadLevel(0);
+            }
+        }
     }
+
+    public void LoadLevel(int levelNumber)
+    {
+        if (levelNumber <= levels.Count)
+        {
+            PlayerPrefs.SetInt(levelString, levelNumber);
+
+        }
+    }
+
+    public void LoadNextLevel()
+    {
+        int currentLevel = PlayerPrefs.GetInt(levelString);
+        LoadLevel(currentLevel + 1);
+    }
+
+    public void CompleteLevel()
+    {
+        LoadNextLevel();
+    }
+
+    public void RestartLevel()
+    {
+        int currentLevel = PlayerPrefs.GetInt(levelString);
+        LoadLevel(currentLevel);
+    }
+
+
 }
