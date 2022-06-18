@@ -7,6 +7,7 @@ public class InfoPaper : Interactable
 
     public override void Interact()
     {
+        CharacterInfoControl.Instance.NextDialog();
         Debug.Log("InfoPaper.Interact()");
     }
 

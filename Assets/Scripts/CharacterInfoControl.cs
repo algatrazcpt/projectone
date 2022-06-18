@@ -6,6 +6,7 @@ using TMPro;
 
 public class CharacterInfoControl : MonoBehaviour
 {
+    public static CharacterInfoControl Instance;
     public CanvasGroup hastaUi;
     public CanvasGroup dialogUi;
     public TMP_Text chracterName;
@@ -29,8 +30,7 @@ public class CharacterInfoControl : MonoBehaviour
     int currentDialog = 0;
     void Start()
     {
-
-        NextDialog();
+        Instance = this;
     }
 
     public void Dialog1Button()
@@ -56,19 +56,25 @@ public class CharacterInfoControl : MonoBehaviour
     }
     void DialogExit()
     {
-        hastaUi.alpha = 1;
-        //hastaUi.alpha = 0;
+        //hastaUi.alpha = 1;
+        hastaUi.alpha = 0;
         dialogUi.alpha = 0;
+
+        CursorShow(false);
         //
-        NextDialog();
+        // NextDialog();
     }
-    void NextDialog()
+    public void NextDialog()
     {
         if (currentDialog < allCharacters.Length)
         {
             PatientGet(allCharacters[currentDialog]);
             currentDialog++;
         }
+        else
+        {
+            Debug.Log("Hasta kalmadi");
+         }
     }
     void PatientGet(Patient patient)
     {
@@ -84,5 +90,19 @@ public class CharacterInfoControl : MonoBehaviour
         chracterIcon.sprite = patient.PatientIcon;
         hastaUi.alpha = 1;
         dialogUi.alpha = 0;
+        CursorShow(true);
+    }
+    void CursorShow(bool value)
+    {
+        if (!value)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }
