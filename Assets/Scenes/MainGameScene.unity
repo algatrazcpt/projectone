@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23062,6 +23062,9 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 0a12830a919ee32459ca8a112f6ee275, type: 2}
   - {fileID: 11400000, guid: 13e2f7aa9bfe50343be6634ad91c368b, type: 2}
+  - {fileID: 11400000, guid: 09819e19efdd50345a26a0b85fb5c52f, type: 2}
+  - {fileID: 11400000, guid: a43833a59cad87b4fb648f1d4220d6a0, type: 2}
+  - {fileID: 11400000, guid: c65558f2c9c20dc4cbef253764f15662, type: 2}
   patient1Paper: {fileID: 1643402336}
   patient2Paper: {fileID: 1423641226}
 --- !u!4 &1337080150

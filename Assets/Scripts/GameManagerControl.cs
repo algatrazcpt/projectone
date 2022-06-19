@@ -82,7 +82,13 @@ public class GameManagerControl : MonoBehaviour
 
     public void CompleteLevel()
     {
-        PlayerPrefs.SetInt(levelString, currentLevel++);
+        currentLevel++;
+        if (currentLevel == 6)
+        {
+            SceneManager.LoadScene("MainFinishScene");
+            return;
+        }
+        PlayerPrefs.SetInt(levelString, currentLevel);
         Debug.Log("level saved number" + currentLevel);
         SceneManager.LoadScene("MainGameScene");
 
