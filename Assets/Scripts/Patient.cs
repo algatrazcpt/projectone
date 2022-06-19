@@ -6,9 +6,11 @@ using UnityEngine;
 public class Patient : ScriptableObject
 {
     public string PatientName;
-    public string PatientHistory;
+    public string PatientAge;
+    public string PatientBloodType;
+    public string PatientJob;
+    public string PatientProblem;
     public string PatientHealth;
-    public string PatientDialog1;
     public string PatientDialog1Exit;
     public bool PatientDialog1Succes;
     public Sprite PatientIcon;

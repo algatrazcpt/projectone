@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 2PatientAzis
+  m_EditorClassIdentifier: 
+  PatientName: Aziz
+  PatientAge: 47
+  PatientBloodType: 0Rh-
+  PatientJob: Doktor
+  PatientProblem: "\u015Eikayeti: B\u0131\xE7akl\u0131 Sald\u0131r\u0131"
+  PatientHealth: "Sabah 06:00 dan gece 18:00 e kadar mesai ba\u015F\u0131nda olan
+    meslekta\u015F\u0131m\u0131z Aziz ambulansta \xE7oktan vefat etmi\u015F olan
+    Hasan K.\u2019 nin yak\u0131nlar\u0131 taraf\u0131ndan b\u0131\xE7akl\u0131 sald\u0131r\u0131ya
+    u\u011Frad\u0131. Sald\u0131rganlar\u0131n s\xF6yledi\u011Fine g\xF6re Hasan
+    K. Doktor Aziz taraf\u0131ndan \xF6ld\xFCr\xFCld\xFC. Hastam\u0131z\u0131n acil
+    0Rh-- kana ihtiyac\u0131 var durumu kritik. "
+  PatientDialog1Exit: "Hasta ameliyat esnas\u0131nda \xF6ld\xFC. Ba\u015Faramad\u0131n..."
+  PatientDialog1Succes: 0
+  PatientIcon: {fileID: 21300000, guid: cfb5e98d57faaa24e963d0942d0acbad, type: 3}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 1PatientCafer
+  m_EditorClassIdentifier: 
+  PatientName: Cafer
+  PatientAge: 17
+  PatientBloodType: ABRh+
+  PatientJob: "\xD6\u011Frenci"
+  PatientProblem: "\u015Eikayeti: Toplum taraf\u0131ndan darp"
+  PatientHealth: "B\xFCt\xFCn g\xFCn televizyonda Delik, \xC7akallar Ovas\u0131 ,
+    Mafya Kainati Ele Ge\xE7iremez  gibi diziler izleyen Cafer izledi\u011Fi dizilerdeki
+    karakterleri \xF6rnek al\u0131p ya\u015Fad\u0131\u011F\u0131 mahalledeki insanlardan
+    hara\xE7 toplay\u0131p argo konu\u015Ftu\u011Fu i\xE7in 15 ki\u015Fi taraf\u0131ndan
+    darp edilerek a\u011F\u0131r yaraland\u0131 durumu stabil fakat bunun gibi bir
+    olay\u0131n tekrar ya\u015Fanmamas\u0131 i\xE7in acil beyin nakli gerekiyor."
+  PatientDialog1Exit: "Hastay\u0131 kurtard\u0131k art\u0131k yeni bir beyni var.
+    Tebrikler!"
+  PatientDialog1Succes: 1
+  PatientIcon: {fileID: 21300000, guid: cfb5e98d57faaa24e963d0942d0acbad, type: 3}
