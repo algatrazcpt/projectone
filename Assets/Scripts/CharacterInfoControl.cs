@@ -23,6 +23,9 @@ public class CharacterInfoControl : MonoBehaviour
     public Image chracterIcon;
     public float dialogShowTime = 3f;
 
+    private static string succesCount = "characterSucces";
+    int count;
+
     void Start()
     {
         Instance = this;
@@ -35,6 +38,9 @@ public class CharacterInfoControl : MonoBehaviour
         dialogSucces = chracterDialog1Succes;
         if (dialogSucces)
         {
+            count = PlayerPrefs.GetInt(succesCount, 0);
+            count++;
+            PlayerPrefs.SetInt(succesCount, count);
             GameSounControl.instance.VfxPlay(2);
             //
             AnimationScript.instance.MovePlayer();

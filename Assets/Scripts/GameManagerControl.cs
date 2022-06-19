@@ -67,6 +67,11 @@ public class GameManagerControl : MonoBehaviour
 
     public void LoadLevel(int levelNumber)
     {
+        if(levelNumber==5)
+        {
+            SceneManager.LoadScene("GameFinishScene");
+            return;
+        }
         if (levelNumber <= levels.Count)
         {
             Level nowLevel = levels[levelNumber];

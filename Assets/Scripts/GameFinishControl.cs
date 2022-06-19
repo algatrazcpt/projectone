@@ -10,6 +10,20 @@ public class GameFinishControl : MonoBehaviour
     public Image stabilEnd;
     public Image sadEnd;
     public float showTime = 4f;
+    private static string succesCount = "characterSucces";
+    private static string levelString = "PlayerLevel";
+    
+    
+    public void GameInfoSettings()
+    {
+        
+        escapeCharacter = PlayerPrefs.GetInt(succesCount, 0);
+        GameFinish();
+    }
+    public void Start()
+    {
+        GameInfoSettings();
+    }
     public void GameFinish()
     {
         if(escapeCharacter>4)
@@ -17,7 +31,7 @@ public class GameFinishControl : MonoBehaviour
             happyEnd.enabled = true;
             Invoke("ReturnMenu",showTime);
         }
-        else if(escapeCharacter>2)
+        else if(escapeCharacter>3)
         {
             stabilEnd.enabled = true;
             Invoke("ReturnMenu", showTime);
@@ -30,7 +44,11 @@ public class GameFinishControl : MonoBehaviour
     }
     public void ReturnMenu()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        PlayerPrefs.SetInt(succesCount, 0);
+        PlayerPrefs.SetInt(levelString, 0);
+        SceneManager.LoadScene("MainScene");
+
+
     }
     public void characaterSucces()
     {

@@ -21,7 +21,7 @@ public class TimerControl : MonoBehaviour
     {
         while (currentTime > 0)
         {
-            count.text= currentTime.ToString();
+            count.text= "Time:" + currentTime.ToString();
             currentTime--;
             yield return new WaitForSeconds(1f);
         }
@@ -31,6 +31,8 @@ public class TimerControl : MonoBehaviour
     }
     void GameFinish()
     {
-        // all characters fail;
+        currentTime = 60;
+        TimerStart();
+        GameManagerControl.Instance.LoadNextLevel();
     }
 }
