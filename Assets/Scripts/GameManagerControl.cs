@@ -36,6 +36,7 @@ public class GameManagerControl : MonoBehaviour
     {
 
         int levelNumber = PlayerPrefs.GetInt(levelString, 0);
+        Debug.Log(levelNumber);
         if (levelNumber <= levels.Count && levelNumber != 0)
         {
             LoadLevel(levelNumber);
@@ -46,6 +47,7 @@ public class GameManagerControl : MonoBehaviour
         {
             LoadLevel(0);
             currentLevel = 0;
+            Debug.Log("level loaded number" + currentLevel);
         }
 
     }
@@ -68,7 +70,6 @@ public class GameManagerControl : MonoBehaviour
         if (levelNumber <= levels.Count)
         {
             Level nowLevel = levels[levelNumber];
-            //PlayerPrefs.SetInt(levelString, levelNumber);
             SetUpLevel(nowLevel);
         }
     }
