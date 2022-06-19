@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 6PatientBerkecan
+  m_EditorClassIdentifier: 
+  PatientName: Berkecan
+  PatientAge: 20
+  PatientBloodType: 0Rh-
+  PatientJob: Aylak
+  PatientProblem: "Araba Kazas\u0131"
+  PatientHealth: "Babas\u0131n\u0131n paras\u0131yla ald\u0131\u011F\u0131 mercedesle
+    insanlara hava atarak makas atan Berkecan keskin bir virajda h\u0131z\u0131n\u0131
+    alamay\u0131p yoldan \xE7\u0131km\u0131\u015Ft\u0131r durumu kritik olan Berkecan\u0131n
+    acilen 0Rh- kana ihtiyac\u0131 vard\u0131r e\u011Fer yeterli miktarda kan bulunamazsa
+    Berkecan \xF6l\xFCcek.(Berkecan\u0131n babas\u0131 0Rh- kan\u0131n ona verilmesi
+    halinde Hastaneye y\xFCksek miktarda ba\u011F\u0131\u015F yap\u0131cakt\u0131r)"
+  PatientDialog1Exit: "Hastanade 0Rh- kan bulunmakta ama \xE7evre hastaneden gelen
+    kan ile hayata tutundu"
+  PatientDialog1Succes: 1
+  PatientIcon: {fileID: 0}

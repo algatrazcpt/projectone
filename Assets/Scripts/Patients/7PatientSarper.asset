@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 7PatientSarper
+  m_EditorClassIdentifier: 
+  PatientName: Sarper
+  PatientAge: 38
+  PatientBloodType: B Rh-
+  PatientJob: "Marangoz Ustas\u0131"
+  PatientProblem: "\xC7apraz Ate\u015F Alt\u0131nda Kalma"
+  PatientHealth: "3 \xE7ocuk babas\u0131 Sarper i\u015Finden eve d\xF6nerken polis-soyguncu
+    aras\u0131ndaki silahl\u0131 \xE7at\u0131\u015Fmada \xE7apraz ate\u015F alt\u0131nda
+    kal\u0131r. Sarperin v\xFCcuduna biri kalbine olmak \xFCzere 3 mermi isabet etmi\u015Ftir.
+    Sarperin durumu kritik acil kalp nakline ihtiyac\u0131 vard\u0131r."
+  PatientDialog1Exit: "Hasta ameliyyat s\u0131ras\u0131nda \xE7\u0131kan ani kanama
+    y\xFCz\xFCnden \xF6ld\xFC"
+  PatientDialog1Succes: 0
+  PatientIcon: {fileID: 0}

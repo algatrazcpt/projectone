@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 10PatientAlp
+  m_EditorClassIdentifier: 
+  PatientName: Alp
+  PatientAge: 12
+  PatientBloodType: AB Rh+
+  PatientJob: "\xD6grenci"
+  PatientProblem: "K\u0131l\u0131\xE7 Yaras\u0131"
+  PatientHealth: "\xC7ok fazla Anime izleyip etrafta k\u0131l\u0131\xE7la ko\u015Fturan
+    Alp k\u0131l\u0131c\u0131n\u0131 havaya f\u0131rlat\u0131p k\u0131l\u0131c\u0131
+    havadayken d\xFC\u015Fmanlar\u0131na tekme att\u0131ktan sonra k\u0131l\u0131c\u0131
+    tutup d\xFC\u015Fmanlar\u0131n\u0131 kesme hareketi yapmaya \xE7al\u0131\u015F\u0131rken
+    havaya att\u0131\u011F\u0131 k\u0131l\u0131\xE7 Alpin omurgas\u0131na sapland\u0131.
+    Alpin durumu kritik acil omuriliknakline ihtiac\u0131 var(beyin de laz\u0131m
+    da omurilik \xF6ncelikli)"
+  PatientDialog1Exit: "Ameliyat ile k\u0131l\u0131\xE7 \xE7\u0131k\u0131r\u0131ld\u0131\u011F\u0131nda
+    vucuta kal\u0131c\u0131 hasar verildi art\u0131k  y\xFCr\xFCyemiyecek ama ya\u015Fayacak"
+  PatientDialog1Succes: 1
+  PatientIcon: {fileID: 0}

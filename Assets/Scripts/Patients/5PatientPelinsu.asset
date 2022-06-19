@@ -12,12 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
   m_Name: 5PatientPelinsu
   m_EditorClassIdentifier: 
-  PatientName: 
-  PatientAge: 
-  PatientBloodType: 
-  PatientJob: 
-  PatientProblem: 
-  PatientHealth: 
-  PatientDialog1Exit: 
+  PatientName: Pelin Su
+  PatientAge: 19
+  PatientBloodType: "\u015Eeker Seviyesinden Dolay\u0131 Bulunamad\u0131"
+  PatientJob: Infulucer
+  PatientProblem: "A\u015F\u0131r\u0131 Dozda Kahve T\xFCketimi"
+  PatientHealth: "Spamducks(nas\u0131l da teliften y\u0131rrt\u0131m) ta t\xFCm kahvelerin
+    fotoraf\u0131n\u0131 \xE7ekip Instegram story\u2019sine at\u0131p t\xFCm kahveleri
+    i\xE7en Pelin Su\u2019yun b\xF6brekleri iflas etmi\u015Ftir olay yerinde bay\u0131lan
+    Pelin Su\u2019yun hesab\u0131 \xF6demeden bay\u0131ld\u0131\u011F\u0131 farkedilmi\u015Ftir
+    Spamducks m\xFCd\xFCr\xFC e\u011Fer b\xF6brekleri iyile\u015Febilirse b\xF6breklerden
+    birine el koymay\u0131 talep etmektedir. E\u011Fer iyile\u015Femezse Pelin Su\u2019nun
+    ba\u011Flanaca\u011F\u0131 diyaliz makinesine el koyup onu sataca\u011F\u0131n\u0131
+    s\xF6ylemektedir"
+  PatientDialog1Exit: "Hastaya verilen ila\xE7lar ters tepki verince ani kalp krizi
+    ile \xF6ld\xFC"
   PatientDialog1Succes: 0
   PatientIcon: {fileID: 0}
