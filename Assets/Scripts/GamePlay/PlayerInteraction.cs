@@ -71,7 +71,6 @@ public class PlayerInteraction : MonoBehaviour
                     StartUIInteraction();
                     // amk texti sıfırlansana debugit later
                     interactionText.text = "";
-                    Debug.Log("clickwait");
                 }
                 break;
             case Interactable.InteractionType.Click:
@@ -107,15 +106,15 @@ public class PlayerInteraction : MonoBehaviour
     public void StopUIInteraction()
     {
         var v = GameObject.FindGameObjectsWithTag("Interact");
-        foreach(GameObject k in v)
+        foreach (GameObject k in v)
         {
-            k.GetComponent<Collider>().enabled=true;
+            k.GetComponent<Collider>().enabled = true;
         }
         playerController.canMove = true;
     }
     public void StartUIInteraction()
     {
-        var v=GameObject.FindGameObjectsWithTag("Interact");
+        var v = GameObject.FindGameObjectsWithTag("Interact");
         foreach (GameObject k in v)
         {
             k.GetComponent<Collider>().enabled = false;

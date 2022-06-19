@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db78841d22b443449acda93d84d8913, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  levelName: "\xD6l\xFCm / Kal\u0131m \u0130kinci G\xFCn"
+  levelDescription: "Bir ki\u015Fiyi se\xE7 bir ki\u015Finin hayat\u0131ndan vazge\xE7
+    umar\u0131m i\u015Fler yolunda gider. Ba\u015Far\u0131lar..."
+  levelNumber: 0
+  patient1: {fileID: 11400000, guid: 397ee0ff2b908db4f8d913f06e058703, type: 2}
+  patient2: {fileID: 11400000, guid: 52098ef2a989b6c40baf1e89fe172ce2, type: 2}
+  levelExperience: 10

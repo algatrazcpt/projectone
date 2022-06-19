@@ -5,22 +5,22 @@ using UnityEngine;
 public class AnimationScript : MonoBehaviour
 {
     public Transform targetPostion;
-    
+
     public Camera mainCam;
     public Camera coridorCam;
     public Camera cryCam;
     public Camera hapyCam;
-    public float showTime=4f;
+    public float showTime = 4f;
     Vector3 startPosition;
     public static AnimationScript instance;
     bool cameraActive = false;
     public bool cameraStats = false;
     void Start()
     {
-        startPosition= transform.position;
+        startPosition = transform.position;
         instance = this;
     }
-    public void  MovePlayer()
+    public void MovePlayer()
     {
         StartCoroutine(PlayerMove());
     }
@@ -42,7 +42,7 @@ public class AnimationScript : MonoBehaviour
         Debug.Log("target arrived");
         transform.position = startPosition;
         CameraActiveted();
-        yield return  null;
+        yield return null;
     }
     void CameraReturn()
     {
@@ -50,7 +50,7 @@ public class AnimationScript : MonoBehaviour
         coridorCam.enabled = false;
         cryCam.enabled = false;
         hapyCam.enabled = false;
-        
+        GameManagerControl.Instance.CompleteLevel();
     }
     public void CameraChange(bool value)
     {
@@ -59,9 +59,9 @@ public class AnimationScript : MonoBehaviour
     }
     void CameraActiveted()
     {
-        if(cameraActive)
+        if (cameraActive)
         {
-            hapyCam.enabled=true;
+            hapyCam.enabled = true;
             coridorCam.enabled = false;
         }
         else
