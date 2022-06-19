@@ -8,6 +8,9 @@ public class GameManagerControl : MonoBehaviour
     public List<Level> levels;
     private static string levelString = "PlayerLevel";
 
+
+
+
     [SerializeField]
     private GameObject patient1Paper;
     [SerializeField]
