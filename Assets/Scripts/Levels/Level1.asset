@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db78841d22b443449acda93d84d8913, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  levelName: First Day On Job
-  levelDescription: You have to choose which person will live is it easy? Can you
-    even choose the right person ?
+  levelName: "Hastanede \u0130lk G\xFCn"
+  levelDescription: "Kimin ya\u015Fayaca\u011F\u0131n\u0131 se\xE7mek zorundas\u0131n
+    ancak i\u015Fler her zaman yolunda gitmeyebilir.."
   levelNumber: 0
   patient1: {fileID: 11400000, guid: e1d79ad276dd6c94c89faf419b7f5f70, type: 2}
   patient2: {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}

@@ -7,17 +7,17 @@ using TMPro;
 public class CharacterInfoControl : MonoBehaviour
 {
     public Transform playerPosition;
-
-
     public static CharacterInfoControl Instance;
     public CanvasGroup hastaUi;
     public CanvasGroup dialogUi;
     public TMP_Text chracterName;
+    public TMP_Text chracterAge;
+    public TMP_Text chracterBlodType;
+    public TMP_Text chracterJob;
     public TMP_Text chracterHistory;
     public TMP_Text chracterHealth;
     public TMP_Text chracterExitDialog;
-    public Button chracterDialog1;
-    public string chracterDialog1Exit;
+    private string chracterDialog1Exit;
     public bool dialogSucces;
     public bool chracterDialog1Succes;
     public Image chracterIcon;
@@ -66,7 +66,7 @@ public class CharacterInfoControl : MonoBehaviour
 
     void DialogExit()
     {
-        
+
         hastaUi.alpha = 0;
         dialogUi.alpha = 0;
         //
@@ -77,10 +77,12 @@ public class CharacterInfoControl : MonoBehaviour
     public void LookAtPatient(Patient patient)
     {
         chracterName.text = patient.PatientName;
-        chracterHistory.text = patient.PatientHistory;
+        chracterAge.text = patient.PatientAge;
+        chracterBlodType.text = patient.PatientBloodType;
+        chracterJob.text = patient.PatientJob;
+        chracterHistory.text = patient.PatientProblem;
         chracterHealth.text = patient.PatientHealth;
         chracterDialog1Exit = patient.PatientDialog1Exit;
-        chracterDialog1.GetComponentInChildren<TMP_Text>().text = patient.PatientDialog1;
         chracterDialog1Succes = patient.PatientDialog1Succes;
         chracterIcon.sprite = patient.PatientIcon;
         hastaUi.alpha = 1;

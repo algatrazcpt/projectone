@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2f78e0fb436bc40af9782b485f7d8b, type: 3}
+  m_Name: 3PatientGiray
+  m_EditorClassIdentifier: 
+  PatientName: Giray
+  PatientAge: 22
+  PatientBloodType: 0Rh+
+  PatientJob: d Artist
+  PatientProblem: "\u015Eikayeti: \xC7ok oturmak"
+  PatientHealth: "52 saat aral\u0131ks\u0131z bilgisayar ba\u015F\u0131nda anime
+    izleyen , oyun oynayan ve oyun yapan Giray \xE7ok oturdu\u011Fundan dolay\u0131
+    fel\xE7 ge\xE7irmi\u015Ftir durumu kritik acilen popo nakli yap\u0131lmas\u0131
+    gerek. "
+  PatientDialog1Exit: "Hasta ameliyat esnas\u0131nda \xF6ld\xFC. Ba\u015Faramad\u0131n..."
+  PatientDialog1Succes: 0
+  PatientIcon: {fileID: 21300000, guid: cfb5e98d57faaa24e963d0942d0acbad, type: 3}
