@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PatientName: Pelin Su
   PatientAge: 19
-  PatientBloodType: "\u015Eeker Seviyesinden Dolay\u0131 Bulunamad\u0131"
+  PatientBloodType: A rh+
   PatientJob: Infulucer
   PatientProblem: "A\u015F\u0131r\u0131 Dozda Kahve T\xFCketimi"
   PatientHealth: "Spamducks(nas\u0131l da teliften y\u0131rrt\u0131m) ta t\xFCm kahvelerin

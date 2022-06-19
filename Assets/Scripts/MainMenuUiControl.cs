@@ -14,6 +14,7 @@ public class MainMenuUiControl : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] buttonClicksSounds;
     public string gameScenename = "";
+    private static string succesCount = "characterSucces";
     private void Start()
     {
         SoundControl.instance.DefaultSounds(7, 7);
@@ -43,6 +44,7 @@ public class MainMenuUiControl : MonoBehaviour
     }
     public void NewGameButtClick()
     {
+        PlayerPrefs.SetInt(succesCount, 0);
         GameSounControl.instance.VfxPlay(0);
         Invoke("NewGame", 0.3f);
 
