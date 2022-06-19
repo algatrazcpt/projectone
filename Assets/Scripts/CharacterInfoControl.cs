@@ -8,9 +8,7 @@ public class CharacterInfoControl : MonoBehaviour
 {
     public Transform playerPosition;
 
-    public Camera mainCam;
-    public Camera cryCam;
-    public Camera hapyCam;
+
     public static CharacterInfoControl Instance;
     public CanvasGroup hastaUi;
     public CanvasGroup dialogUi;
@@ -38,24 +36,22 @@ public class CharacterInfoControl : MonoBehaviour
         if (dialogSucces)
         {
             GameSounControl.instance.VfxPlay(2);
-            hapyCam.enabled = true;
-            mainCam.enabled = false;
+            //
+            AnimationScript.instance.MovePlayer();
+            AnimationScript.instance.CameraChange(true);
         }
         else
         {
             GameSounControl.instance.VfxPlay(0);
             Invoke("SoundFix", 3);
-            cryCam.enabled = true;
-            mainCam.enabled = false;
         }
-    }
-    public void PlayerLocationReset()
-    {
-       // playerPosition.position=(new Vector3(4.93728447f, 1.31456006f, -10.2636957f));
     }
     public void SoundFix()
     {
         GameSounControl.instance.VfxPlay(1);
+        //
+        AnimationScript.instance.MovePlayer();
+        AnimationScript.instance.CameraChange(false);
     }
 
     void DialogSet(string value)
@@ -67,21 +63,12 @@ public class CharacterInfoControl : MonoBehaviour
         CursorShow(false);
         Invoke("DialogExit", dialogShowTime);
     }
-    void CameraReturn()
-    {
-        
-        mainCam.enabled = true;
-        cryCam.enabled = false;
-        hapyCam.enabled = false;
-    }
+
     void DialogExit()
     {
         
         hastaUi.alpha = 0;
         dialogUi.alpha = 0;
-        //
-        PlayerLocationReset();
-        CameraReturn();
         //
         CloseWithoutChoosing();
     }
