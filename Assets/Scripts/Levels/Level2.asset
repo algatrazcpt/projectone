@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: "\xD6l\xFCm / Kal\u0131m \u0130kinci G\xFCn"
   levelDescription: "Bir ki\u015Fiyi se\xE7 bir ki\u015Finin hayat\u0131ndan vazge\xE7
     umar\u0131m i\u015Fler yolunda gider. Ba\u015Far\u0131lar..."
-  levelNumber: 0
-  patient1: {fileID: 11400000, guid: 397ee0ff2b908db4f8d913f06e058703, type: 2}
-  patient2: {fileID: 11400000, guid: 52098ef2a989b6c40baf1e89fe172ce2, type: 2}
+  levelNumber: 2
+  patient1: {fileID: 11400000, guid: b26c6836a31e3c949824d9c248dfdb97, type: 2}
+  patient2: {fileID: 11400000, guid: ca65bb4fd1194d24f9f8add3db55e8e4, type: 2}
   levelExperience: 10

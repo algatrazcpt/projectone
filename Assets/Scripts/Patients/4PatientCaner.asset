@@ -23,4 +23,4 @@ MonoBehaviour:
     bacak nakli gerekebilir "
   PatientDialog1Exit: "Hasta ameliyat esnas\u0131nda \xF6ld\xFC. Ba\u015Faramad\u0131n..."
   PatientDialog1Succes: 0
-  PatientIcon: {fileID: 21300000, guid: 74c32fd13531b42d7b3dd3498eeb4b2b, type: 3}
+  PatientIcon: {fileID: 21300000, guid: 224818ab877d8ec439ed14739d6809e5, type: 3}

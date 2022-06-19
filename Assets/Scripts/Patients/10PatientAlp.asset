@@ -27,4 +27,4 @@ MonoBehaviour:
   PatientDialog1Exit: "Ameliyat ile k\u0131l\u0131\xE7 \xE7\u0131k\u0131r\u0131ld\u0131\u011F\u0131nda
     vucuta kal\u0131c\u0131 hasar verildi art\u0131k  y\xFCr\xFCyemiyecek ama ya\u015Fayacak"
   PatientDialog1Succes: 1
-  PatientIcon: {fileID: 0}
+  PatientIcon: {fileID: 21300000, guid: 486aeda2881803f48b8e7940f4a6ef60, type: 3}

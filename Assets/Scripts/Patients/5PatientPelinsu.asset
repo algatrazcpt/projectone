@@ -28,4 +28,4 @@ MonoBehaviour:
   PatientDialog1Exit: "Hastaya verilen ila\xE7lar ters tepki verince ani kalp krizi
     ile \xF6ld\xFC"
   PatientDialog1Succes: 0
-  PatientIcon: {fileID: 0}
+  PatientIcon: {fileID: 21300000, guid: 1201a22bb26f8a2428d19d5c6918e303, type: 3}
