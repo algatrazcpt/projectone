@@ -40,7 +40,7 @@ public class GameManagerControl : MonoBehaviour
         {
             LoadLevel(levelNumber);
             currentLevel = levelNumber;
-            Debug.Log("level loaded" + currentLevel);
+            Debug.Log("level loaded number" + currentLevel);
         }
         else
         {
@@ -50,26 +50,26 @@ public class GameManagerControl : MonoBehaviour
 
     }
 
-    private void SetUpLevel()
+    private void SetUpLevel(Level lvl)
     {
-        if (levels[currentLevel].patient1 != null)
+        if (lvl.patient1 != null)
         {
-            patient1Paper.GetComponent<InfoPaper>().patient = levels[currentLevel].patient1;
+            patient1Paper.GetComponent<InfoPaper>().patient = lvl.patient1;
         }
-        if (levels[currentLevel].patient2 != null)
+        if (lvl.patient2 != null)
         {
-            patient2Paper.GetComponent<InfoPaper>().patient = levels[currentLevel].patient2;
+            patient2Paper.GetComponent<InfoPaper>().patient = lvl.patient2;
         }
-        GameSceneUIControl.Instance.SetDialogue(levels[currentLevel]);
+        GameSceneUIControl.Instance.SetDialogue(lvl);
     }
 
     public void LoadLevel(int levelNumber)
     {
         if (levelNumber <= levels.Count)
         {
-
-            PlayerPrefs.SetInt(levelString, levelNumber);
-            SetUpLevel();
+            Level nowLevel = levels[levelNumber];
+            //PlayerPrefs.SetInt(levelString, levelNumber);
+            SetUpLevel(nowLevel);
         }
     }
 
@@ -81,14 +81,10 @@ public class GameManagerControl : MonoBehaviour
 
     public void CompleteLevel()
     {
-        LoadNextLevel();
-    }
-
-    public void RestartLevel()
-    {
+        PlayerPrefs.SetInt(levelString, currentLevel++);
+        Debug.Log("level saved number" + currentLevel);
         SceneManager.LoadScene("MainGameScene");
 
     }
-
 
 }

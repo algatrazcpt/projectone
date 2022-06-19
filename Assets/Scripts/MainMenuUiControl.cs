@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUiControl : MonoBehaviour
 {
+    public Button continueButton;
     public CanvasGroup menuUi;
     public CanvasGroup soundUi;
     public AudioSource audioSource;
@@ -17,6 +18,11 @@ public class MainMenuUiControl : MonoBehaviour
     {
         SoundControl.instance.DefaultSounds(7, 7);
         soundUi.gameObject.SetActive(false);
+        if (PlayerPrefs.GetInt("PlayerLevel", 0) == 0)
+        {
+            continueButton.interactable = false;
+        }
+
     }
     public void SettingsButtClick()
     {
@@ -35,20 +41,23 @@ public class MainMenuUiControl : MonoBehaviour
         menuUi.gameObject.SetActive(true);
         GameSounControl.instance.VfxPlay(0);
     }
-    public void NewGameButtClick()    {
+    public void NewGameButtClick()
+    {
         GameSounControl.instance.VfxPlay(0);
         Invoke("NewGame", 0.3f);
-        
+
     }
-   void NewGame()
+    void NewGame()
     {
+        PlayerPrefs.SetInt("PlayerLevel", 0);
+
         SceneManager.LoadScene(gameScenename);
     }
     public void Continue()
     {
         GameSounControl.instance.VfxPlay(0);
         Debug.Log("Continue");
-        //SceneManager.LoadScene(gameScenename);
+        SceneManager.LoadScene(gameScenename);
     }
 
 }
